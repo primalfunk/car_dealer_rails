@@ -1,0 +1,22 @@
+<<%= form_for @car do |f| %>
+  <%= f.label :make %>
+  <%= f.text_field :make %>
+
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :msrp %>
+  <%= f.text_field :msrp %>
+
+  <%= f.label :used %>
+  <%# <%= f.text_field :used %>
+  <%= f.select(:used, options_for_select([['True', true], ['False', false]], @car.used))%>
+
+  <%= f.submit %>
+<% end %>
